@@ -1,4 +1,4 @@
-image=platec/knoradockerstackclient:20180404
+image=platec/knoradockerstackclient:latest
 container=knoradockerclient
 network=host
 
@@ -34,3 +34,15 @@ login:
 
 push:
 	docker push $(image)
+
+run-graphdb:
+	docker run --net=host --rm -it platec/graphdb-free-init-1.1.0
+
+open-graphdb:
+	docker exec knoradockerclient firefox localhost:7200
+
+open-knora:
+	docker exec knoradockerclient firefox localhost:3333/v1/vocabularies
+
+open-salsah:
+	docker exec knoradockerclient firefox localhost:3335/index.html
