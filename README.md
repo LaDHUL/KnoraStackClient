@@ -85,4 +85,3 @@ Or use the image from docker hub:
 ```bash
 docker run --net=host -it --rm -e DISPLAY=docker.for.mac.host.internal:0 platec/knoradockerstackclient
 ```
-
