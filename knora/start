@@ -1,0 +1,10 @@
+#! /bin/sh
+HOST=`hostname`
+#
+# fix host for macOS dockarized stack running with argument '--net=host'
+#
+echo "127.0.0.1 ${HOST}" >> /etc/hosts
+#
+# starting knora
+#
+/webapi/bin/webapi
